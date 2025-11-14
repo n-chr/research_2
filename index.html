@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Words Stocker</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/script.js" defer></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="./script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <!-- モバイル用ヘッダー (デフォルトで非表示、モバイルで表示) -->
+    <header class="header-mobile">
+        <a href="index.html">
+            <h1><img src="./img/logo.png"></h1>
+        </a>
+        <div id="navArea">
+            <nav>
+                <div class="inner">
+                    <ul>
+                        <li><a href="./index.html#sec01">Home</a></li>
+                        <li><a href="./index.html#sec02">Words</a></li>
+                        <li><a href="./index.html#sec03">Survey Results</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="toggle_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="mask"></div>
+    </header>
+    <div class="outer-container">
+        <aside class="left-side-element">
+            <div class="nav_wrapper">
+                <div class="button_solid012">
+                    <a href="#sec01">About<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="#sec02">Words<i class="fas fa-angle-right fa-position-right"></i></a>
+                    <a href="#sec03">Survey Results<i class="fas fa-angle-right fa-position-right"></i></a>
+                </div>
+        </aside>
+        <div class="wrapper cstm-box-notebook">
+            <section class="content" id="sec01">
+                <h2>About</h2>
+                <h3>このサイトについて</h3>
+                <p class="catch_copy"><span>ようこそ！</span>
+                    <span>ここは、人に言われて嬉しい言葉を集めるWebサイトです！</span>
+                    <span>人に言われると嬉しい言葉が心理的な健康に与える影響を考慮し、</span>
+                    <span>ストレス軽減や自己肯定感の向上に役立つ言葉を広めるために制作しました。</span>
+                    <span>少しでもお役に立てば嬉しいです。</span>
+                </p>
+            </section>
+            <section class="content" id="sec02">
+                <section id="Words">
+                    <h2>Words</h2>
+                    <h3>分類</h3>
+                    <div class="list-grid">
+                        <a href="single_1.html" class="heading" style="border-right: 27px solid #ff8787;">Recognition
+                            <h4>承認</h3>
+                                <p>相手の行動、努力、結果を認め、評価する言葉</p>
+                        </a>
+                        <a href="single_2.html" class="heading" style="border-right: 27px solid #ffaa25;">Encouragement
+                            <h4>励まし</h3>
+                                <p>相手を鼓舞し、前向きな行動を促す言葉</p>
+                        </a>
+                        <a href="single_3.html" class="heading" style="border-right: 27px solid #90e683;">Presence
+                            <h4>存在承認</h3>
+                                <p>相手の存在そのものを認め、受け入れていることを示す言葉</p>
+                        </a>
+                        <a href="single_4.html" class="heading" style="border-right: 27px solid #708eff;">Skill &
+                            Appearance
+                            <h4>能力・外見承認</h3>
+                                <p>相手のスキル、才能、知識、または外見を褒める言葉</p>
+                        </a>
+                        <a href="single_5.html" class="heading" style="border-right: 27px solid #ad70ff;">Personality
+                            <h4>人柄評価</h3>
+                                <p>相手の性格、内面、人間性といった抽象的な特質を褒める言葉</p>
+                        </a>
+                        <a href="single_6.html" class="heading" style="border-right: 27px solid #ff9adc;">Gratitude
+                            <h4>感謝</h3>
+                                <p>相手の行為や配慮に対してお礼の気持ちを伝える言葉</p>
+                        </a>
+                    </div>
+                </section>
+            </section>
+            <section class="content" id="sec03">
+                <section id="Survey_Results">
+                    <h2>Survey Results</h2>
+                    <h3>アンケート結果</h3>
+                    <div class="Survey_Results">
+                        <div class="accordion_container">
+
+                            <div class="accordion-item">
+                                <div class="accordion-title">
+                                    <h5>1. 年代別構成</h5>
+                                    <span class="icon fas fa-chevron-down"></span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>アンケート回答者の年代構成は以下の通りです。主に20代からの回答が多くなっています。</p>
+                                    <div id="piechart1" style="width: 100%; height: 250px;"></div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-title">
+                                    <h5>2. 性別構成</h5>
+                                    <span class="icon fas fa-chevron-down"></span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>女性からの回答が約8割を占めています。</p>
+                                    <div id="piechart2" style="width: 100%; height: 250px;"></div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-title">
+                                    <h5>3. 職業構成</h5>
+                                    <span class="icon fas fa-chevron-down"></span>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>回答者のほとんどが学生です。</p>
+                                    <div id="piechart3" style="width: 100%; height: 250px;"></div>
+                                </div>
+                            </div>
+
+                            <section class="content">
+                                <div class="chat-container">
+                                    <div class="chat-message system-message">
+                                        <div class="box">
+                                            <p>Q1,言われて嬉しかった“ひとこと”や“ワード”を教えてください。</p>
+                                            <p><img src="./img/Q.1.png"></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="chat-message system-message">
+                                        <div class="box">
+                                            <p>Q2,その言葉をくれた人は誰？</p>
+                                            <p><img src="./img/Q.2.png"></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="chat-message system-message">
+                                        <div class="box">
+                                            <p>Q3,その言葉が嬉しかった理由を選んでください。</p>
+                                            <p><img src="./img/Q.3.png"></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="chat-message system-message">
+                                        <div class="box">
+                                            <p>Q4,今まで言われて嬉しかった“文章・セリフ”を教えてください。</p>
+                                            <ul>
+                                                <li>いつも頑張ってるね。</li>
+                                                <li>これからも、よろしく！</li>
+                                                <li>他の人とは違う視点で物事を見れていてすごいと思う。</li>
+                                                <li>いつも頑張ってて偉い！</li>
+                                                <li>あなたの演奏、とても感動したよ。</li>
+                                                <li>貴方に出会えてよかった。</li>
+                                                <li>ありがとう。</li>
+                                                <li>あなたのそういうところすっごく好き。</li>
+                                                <li>カリスマ性があるね</li>
+                                                <li>今まであった人でいちばん面白いわ。</li>
+                                                <li>助かった！</li>
+                                                <li>〇〇が居ないとはじまらない。</li>
+                                                <li>きっと何とかなるから大丈夫だよ。</li>
+                                                <li>無理してなくても一緒にいたいと思える。</li>
+                                                <li>いつまでも支えるよ。</li>
+                                                <li>いつも頼りにしてる。</li>
+                                                <li>いるだけで場が明るくなるね。</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="chat-message system-message">
+                                        <div class="box">
+                                            <p>Q5,その言葉が心に残った理由（自由回答）</p>
+                                            <ul>
+                                                <li>この先も一緒に過ごせていけると思ったから。</li>
+                                                <li>自分が音楽において1番大切にしている部分を認めてもらえた気がしたから。</li>
+                                                <li>初めて言われたから。</li>
+                                                <li>自分の知らないことを教えてもらったから。</li>
+                                                <li>嬉しかった！</li>
+                                                <li>社会人になるのが不安だったけど、すこし安心できたから。</li>
+                                                <li>今までの頑張りを全て認めてくれてた気がしたから。</li>
+                                                <li>信頼を置いてくれていると感じた。</li>
+                                                <li>ちゃんと見てくれてる、認めてくれてると思えたから。</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                </section>
+            </section>
+            <footer>
+                <p>@ Good Words Stocker</p>
+            </footer>
+
+        </div>
+        <aside class="right-side-element">
+            <div class="side-content-list">
+                <div class="side-content-item">
+                    <img src="./img/Good.png" alt="Goodの画像">
+                </div>
+
+                <div class="side-content-item">
+                    <img src="./img/Words.png" alt="Wordsの画像">
+                </div>
+
+                <div class="side-content-item">
+                    <img src="./img/Stocker.png" alt="Stockerの画像">
+                </div>
+            </div>
+        </aside>
+    </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
+    <div class="container">
+        <button class="page-top"><i class="fa-solid fa-arrow-up"></i>
+            <p>PAGE TOP
+            <p>
+        </button>
+    </div>
+</body>
+
+</html>
